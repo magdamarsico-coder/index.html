@@ -6,8 +6,6 @@
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
 }
@@ -17,20 +15,14 @@ body {
   font-size: large;
 }
 
-main {
-  font-family: "Lucida Handwriting", cursive;
-  text-align: center;
-  flex: 1;
-}
-
 .content {
   position: relative;
   height: 150px;
   width: 100vw;
 }
 .content .logo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
@@ -46,6 +38,13 @@ main {
   top: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
+}
+
+header p {
+  text-align: center;
+  background-color: rgb(180, 224, 180);
+  font-family: "Lucida Console", serif;
+  padding: 10px;
 }
 
 .navbar {
@@ -80,7 +79,8 @@ main {
   align-items: center;
   padding: 20px;
 }
-.contacto label, .contacto input {
+.contacto label,
+.contacto input {
   align-items: center;
   margin: 20px;
   padding: 20px;
@@ -100,6 +100,31 @@ main {
   font-family: "Lucida Console", serif;
   font-size: 1.5em;
   padding: 10px;
+}
+.quienessomos .carousel {
+  width: 80%;
+  max-width: 750px;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.quienessomos .carousel .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+.quienessomos .carousel .carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+main {
+  font-family: "Lucida Handwriting", cursive;
+  text-align: center;
+  flex: 1;
 }
 
 .galeria-index {
@@ -141,7 +166,6 @@ main {
   transform: scale(1.02);
 }
 
-header p,
 footer p {
   text-align: center;
   background-color: rgb(180, 224, 180);
@@ -184,6 +208,13 @@ footer p {
     font-size: 1.8em;
     text-align: center;
   }
+  .quienessomos .carousel {
+    width: 90%;
+    max-width: 600px;
+  }
+  .quienessomos .carousel .carousel-item img {
+    padding: 8px;
+  }
 }
 @media (max-width: 480px) {
   .galeria-ropa {
@@ -214,6 +245,13 @@ footer p {
     position: static;
     transform: none;
     font-size: 1.8em;
+  }
+  .quienessomos .carousel {
+    width: 95%;
+    max-width: 400px;
+  }
+  .quienessomos .carousel-item img {
+    padding: 6px;
   }
 }
 

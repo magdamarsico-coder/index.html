@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quienessomos</title>
+    <title>Quiénes Somos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
-    <p>Envios gratis a todo el país con la compra de $100.000</p> 
+    <p>Envíos gratis a todo el país con la compra de $100.000</p> 
     <nav class="navbar">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -16,38 +17,56 @@
         <li><a href="../pages/escarpines.html">Escarpines</a></li>
         <li><a href="../pages/sale.html">Sale!</a></li>
         <li><a href="../pages/contacto.html">Contacto</a></li>
-        <li><a href="../pages/quienessomos.html"> Nosotros</a></li>
+        <li><a href="../pages/quienessomos.html">Nosotros</a></li>
       </ul>
     </nav>
     <section class="content">
-        <img src="../Imagenes/logo1.jpeg" alt="Logo La Paz Broderie"class="logo">  
-        <p class="bienvenidos"> Bienvenidos a La Paz Broderie! </p>
-        <h1 class="titulos">Quienes somos?</h1>
+        <img src="../Imagenes/logo1.jpeg" alt="Logo La Paz Broderie" class="logo">  
+        <p class="bienvenidos">Bienvenidos a La Paz Broderie!</p>
+        <h1 class="titulos">Quiénes somos</h1>
     </section>
   </header>
 
-    <h2 class="quienessomos">Mi nombre es María, soy de Entre Ríos. Durante gran parte de mi vida, mi pasión fue crear ropa: tejiendo, cosiendo y bordando. Sin embargo, por un tiempo dejé esa pasión un poco de lado. 
-           <br>
-           <br>
-           Hace unos años nació mi nieta Emilia, mi mayor inspiración y la modelo de lo que hoy es La Paz Broderie. Con ella revivió mi entusiasmo por crear, y así fue como comencé a expandir nuevamente esta vocación que tanto amo.
-           <br>
-           <br>
-           En La Paz Broderie encontrarás ropa para niños de hasta 24 meses, confeccionada con amor, dedicación y un profundo cuidado por los detalles.
-           <br>
-           <br>
-           Buscamos marcar la diferencia en la ropa infantil, ofreciendo exclusividad y máxima calidad. Cada prenda tiene ese toque especial, distinto e innovador que la hace única.
-    </h2>
+  <main>
+    <section class="quienessomos">
+      <p>Mi nombre es María, soy de Entre Ríos. Durante gran parte de mi vida, mi pasión fue crear ropa: tejiendo, cosiendo y bordando. Sin embargo, por un tiempo dejé esa pasión un poco de lado.</p>
+      <p>Hace unos años nació mi nieta Emilia, mi mayor inspiración y la modelo de lo que hoy es La Paz Broderie. Con ella revivió mi entusiasmo por crear, y así fue como comencé a expandir nuevamente esta vocación que tanto amo.</p>
+      <p>En La Paz Broderie encontrarás ropa para niños de hasta 24 meses, confeccionada con amor, dedicación y un profundo cuidado por los detalles.</p>
+      <p>Buscamos marcar la diferencia en la ropa infantil, ofreciendo exclusividad y máxima calidad. Cada prenda tiene ese toque especial, distinto e innovador que la hace única.</p>
 
-    <main>
-        <section class="galeria-index">
-            <img class="imagenesindex" src="../Imagenes/imagen1.jpeg" alt="Imagen de bombachudo para niña floreado">
-            <img class="imagenesindex" src="../Imagenes/imagen2.jpeg" alt="Imagen de blusa para niña con detalles en broderie">
-            <img class="imagenesindex" src="../Imagenes/blusaflor.jpeg" alt="Imagen de blusa floreada para niña">
-        </section>
-    </main>
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../Imagenes/imagen1.jpeg" class="d-block w-100" alt="Imagen de bombachudo para niña floreado">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/imagen2.jpeg" class="d-block w-100" alt="Imagen de blusa para niña con detalles en broderie">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/blusaflor.jpeg" class="d-block w-100" alt="Imagen de blusa floreada para niña">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>Seguinos en <a href="https://www.instagram.com/lapazbroderie/">@lapazbroderie</a></p>
-    </footer>
+  <footer>
+    <p>Seguinos en <a href="https://www.instagram.com/lapazbroderie/">@lapazbroderie</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
