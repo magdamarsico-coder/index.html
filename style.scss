@@ -21,6 +21,35 @@ body {
   font-size: large;
 }
 
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-carousel($width, $max-width, $padding) {
+  width: $width;
+  max-width: $max-width;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .carousel-item {
+    transition: transform 0.6s ease-in-out;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background-color: #f8f9fa;
+      padding: $padding;
+    }
+  }
+}
+
 .content {
   position: relative;
   height: 150px;
@@ -60,19 +89,15 @@ header {
 .navbar {
   width: 300px;
   height: 150px;
-  display: flex;
-  flex-direction: row;
+  @include flex-center(row, flex-start, center);
   text-align: center;
   text-decoration: none;
   font-family: $fuente-navbar;
   padding: 15px 20px;
 
   ul {
-    display: flex;
-    flex-direction: row;
+    @include flex-center(row, flex-start, center);
     list-style: none;
-    padding: 0;
-    margin: 0;
 
     li {
       margin: 0 15px;
@@ -86,14 +111,10 @@ header {
 }
 
 .contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-center(column, center, center);
   padding: 20px;
 
-  label,
-  input {
-    align-items: center;
+  label, input {
     margin: 20px;
     padding: 20px;
     width: 100%;
@@ -105,36 +126,17 @@ header {
 }
 
 .enviar {
-  align-content: center;
   width: 50%;
+  align-content: center;
 }
 
 .quienessomos {
   text-align: center;
   font-family: $fuente-texto;
   font-size: 1.5em;
-  padding: 10px;
 
   .carousel {
-    width: 80%;
-    max-width: 750px;
-    margin: 40px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-    .carousel-item {
-      transition: transform 0.6s ease-in-out;
-
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        background-color: #f8f9fa;
-        padding: 10px;
-      }
-    }
+    @include responsive-carousel(80%, 750px, 10px);
   }
 }
 
@@ -145,8 +147,7 @@ main {
 }
 
 .galeria-index {
-  display: flex;
-  justify-content: center;
+  @include flex-center(row, center, center);
   flex-wrap: wrap;
   gap: 20px;
   margin: 40px auto;
@@ -242,12 +243,7 @@ footer {
 
   .quienessomos {
     .carousel {
-      width: 90%;
-      max-width: 600px;
-
-      .carousel-item img {
-        padding: 8px;
-      }
+      @include responsive-carousel(90%, 600px, 8px);
     }
   }
 }
@@ -293,11 +289,7 @@ footer {
 
   .quienessomos {
     .carousel {
-      width: 95%;
-      max-width: 400px;
-      }
-    .carousel-item img {
-      padding: 6px;
-      }
+      @include responsive-carousel(95%, 400px, 6px);
     }
   }
+}
