@@ -48,26 +48,23 @@ header p {
 }
 
 .navbar {
-  width: 300px;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
+  width: 100%;
+  padding: 10px 20px;
   font-family: cursive;
-  padding: 15px 20px;
 }
 .navbar ul {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  font-size: 1em;
 }
-.navbar ul li {
-  margin: 0 15px;
+.navbar li {
+  margin: 5px 0;
 }
 
 .bienvenidos {
@@ -183,14 +180,8 @@ footer p {
     width: 45%;
   }
   .navbar ul {
-    flex-direction: row;
-    align-items: center;
-    font-size: medium;
-    margin: auto;
-    padding: auto;
-  }
-  .navbar li {
-    margin: 10px 0;
+    font-size: 0.9em;
+    gap: 8px;
   }
   .content {
     flex-direction: column;
@@ -238,46 +229,9 @@ footer p {
     width: 45%;
   }
   .navbar ul {
-    flex-direction: row;
-    font-size: medium;
-    margin: 0 10px;
-  }
-  .navbar li {
-    margin: 10px 0;
-  }
-  .content {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
-  }
-  .content .logo {
-    position: static;
-    transform: none;
-    margin-bottom: 10px;
-  }
-  .content .titulos {
-    position: static;
-    transform: none;
-    font-size: 1.8em;
-  }
-  .quienessomos .carousel {
-    width: 95%;
-    max-width: 400px;
-    margin: 40px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  .quienessomos .carousel .carousel-item {
-    transition: transform 0.6s ease-in-out;
-  }
-  .quienessomos .carousel .carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    background-color: #f8f9fa;
-    padding: 6px;
+    font-size: 0.8em;
+    gap: 5px;
+    justify-content: space-around;
   }
 }
 
